@@ -1,6 +1,6 @@
 # Responsive Portfolio Website by. WASIN
 ## [Watch it on youtube](https://youtu.be/vHxVWdMUYo0)
-### Responsive Portfolio Website Xian
+### Responsive Portfolio Website WASIN
 
 - Responsive Portfolio Website Using HTML CSS And JavaScript
 - Contains animations when scrolling.
