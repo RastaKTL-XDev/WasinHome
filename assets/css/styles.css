@@ -156,13 +156,13 @@ img {
 }
 
 .nav__list{
+  align-items: center;
   display: flex;
   justify-items: space-between;
   align-items: center;
 }
 
 .nav__link{
-  align-items: center;
   width: 2.5rem;
   height: 2.5rem;
   background-color: transparent;
