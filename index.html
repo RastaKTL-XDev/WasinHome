@@ -1,225 +1,111 @@
-/*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Montserrat+Alternates:wght@400;500;600&display=swap");
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/*=============== VARIABLES CSS ===============*/
-:root {
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  /* 
-         Change favorite color:
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
 
-         Default (Red): hsl(358, 80%, 49%)
-         Purple: hsl(265, 80%, 49%) - Blue: hsl(220, 80%, 49%)
-         Pink: hsl(330, 80%, 49%) - Green: hsl(162, 70%, 40%)
-         Orange: hsl(14, 80%, 49%)
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
 
-         For more colors visit: https://htmlcolorcodes.com/
-         -> Choose any color 
-         -> Copy the color mode (HSL)
-  */
-  --hue: 358;
-  --first-color: hsl(var(--hue), 80%, 49%);
-  --first-color-alt: hsl(var(--hue), 76%, 45%);
-  --white-color: hsl(0, 0%, 98%);
-  --black-color: hsl(0, 0%, 1%);
-  --text-color: hsl(var(--hue), 2%, 66%);
-  --body-color: hsl(var(--hue), 100%, 1%);
-  --container-color: hsl(var(--hue), 2%, 10%);
-  --conic-gradient: conic-gradient(from 150deg at 50% 45%,
-                  hsl(var(--hue), 80%, 20%) 0deg,
-                  hsl(var(--hue), 80%, 48%) 140deg,
-                  hsl(var(--hue), 80%, 20%) 360deg);
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
 
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Montserrat Alternates", sans-serif;
-  --second-font: "Grechen Fuemen", cursive;
-  --biggest-font-size: 2.5rem;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
+      <title>PROJECTS by "WASIN"</title>
+   </head>
+   <body>
+      <!--==================== NAV ====================-->
+      <nav class="nav">
+         <ul class="nav__list"
+         <li>
+            <a href="home" title="Home" class="nav__link">
+               <i class="ri-home-3-fill"></i>
+            </a>
+         </li>
 
-  /*========== Font weight ==========*/
-  --font-regular: 400;
-  --font-medium: 500;
-  --font-semi-bold: 600;
+          <li>
+            <a href="#projects" title="Projects" class="nav__link">
+               <i class="ri-folder-3-fill"></i>
+            </a>
+         </li> 
 
-  /*========== z index ==========*/
-  --z-tooltip: 10;
-  --z-fixed: 100;
-}
+         <li>
+            <a href="#services" title="Services" class="nav__link">
+               <i class="ri-file-edit-fill"></i>
+            </a>
+         </li> 
 
-/*========== Responsive typography ==========*/
-@media screen and (min-width: 1168px) {
-  :root {
-    --biggest-font-size: 3.5rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
-  }
-}
+         <li>
+            <a href="#experience" title="Experience" class="nav__link">
+               <i class="ri-honour-fill"></i>
+            </a>
+         </li> 
 
-/*=============== BASE ===============*/
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+         <li>
+          <a href="#contact" title="Contact" class="nav__link">
+                 <i class="ri-send-plane-fill"></i>
+               </a>
+            </li> 
+         </ul>
+      </nav>
 
-html {
-  scroll-behavior: smooth;
-}
-
-body,
-input,
-textarea,
-button {
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-}
-
-body {
-  background-color: var(--body-color);
-  color: var(--white-color);
-}
-
-input,
-button,
-textarea {
-  border: none;
-  outline: none;
-}
-
-h1, h2, h3, h4 {
-  color: var(--white-color);
-  font-weight: var(--font-semi-bold);
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-/*=============== REUSABLE CSS CLASSES ===============*/
-.container {
-  max-width: 1168px;
-  margin-inline: 1.5rem;
-}
-
-.grid {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.section {
-  padding-block: 2rem 3rem;
-}
-
-.section__title {
-  font-size: var(--h2-font-size);
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.main {
-  overflow: hidden;
-}
-
-/*=============== NAV ===============*/
-.nav{
-  position:fixed;
-  bottom: 1.5rem;
-  left: 0;
-  right: 0;
-  background-color: crimson;
-  width: 88%;
-  margin-inline: auto;
-  backdrop-filter: blur(16px);
-  padding: 1rem 2rem;
-  border-radius: 4rem;
-  z-index: var(--z-fixed);
-}
-
-.nav__list{
-  display: flex;
-  justify-items: space-between;
-  align-items: center;
-}
-
-.nav__link{
-  width: 2.5rem;
-  height: 2.5rem;
-  background-color: transparent;
-  color: var(--white-color);
-  font-size: 1.5rem;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  transition: background-color .6s;
-}
-/* Active link */
+      <!--==================== MAIN ====================-->
+      <main class="main">
+         <!--==================== HOME ====================-->
+         <section class="home section" id="home">
+            <div class="home__container container grid">
+               <!--===== PERFIL =====-->
 
 
-/*=============== HOME ===============*/
-/*===== PERFIL =====*/
+               <!--===== INFO =====-->
 
 
-/*===== INFO =====*/
+               <!--===== ABOUT =====-->
 
 
-/*===== ABOUT =====*/
+               <!--===== SKILLS =====-->
+               
+            </div>
+         </section>
+
+         <!--==================== PROJECTS ====================-->
+         <section class="projects section" id="projects">
+            
+         </section>
+
+         <!--==================== SERVICES ====================-->
+         <section class="services section" id="services">
+
+         </section>
+
+         <!--==================== EXPERIENCE ====================-->
+         <section class="experience section" id="experience">
+            
+         </section>
+
+         <!--==================== CONTACT ====================-->
+         <section class="contact section" id="contact">
+            
+         </section>
+      </main>
+
+      <!--==================== FOOTER ====================-->
+      <footer class="footer">
+         
+      </footer>
+
+      <!--========== SCROLL UP ==========-->
 
 
-/*===== SKILLS =====*/
+      <!--=============== SCROLLREVEAL ===============-->
+      <script src=""></script>
 
+      <!--=============== EMAIL JS ===============-->
+      <script src=""></script>
 
-/*=============== BUTTON ===============*/
-
-
-/*=============== PROJECTS ===============*/
-
-
-/*=============== SERVICES ===============*/
-
-
-/*=============== EXPERIENCE ===============*/
-
-
-/*=============== CONTACT ===============*/
-
-
-/*=============== FOOTER ===============*/
-
-
-/*=============== SCROLL BAR ===============*/
-
-
-/*=============== SCROLL UP ===============*/
-
-
-/* Show Scroll Up */
-
-
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
-
-
-/* For medium devices */
-
-
-/* For large devices */
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>
