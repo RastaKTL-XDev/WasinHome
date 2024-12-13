@@ -142,11 +142,10 @@ img {
 
 /*=============== NAV ===============*/
 .nav{
-  align-items: center;
   position:fixed;
   bottom: 1.5rem;
   left: 0;
-  right: 0;
+  right: 50%;
   background-color: crimson;
   width: 88%;
   margin-inline: auto;
