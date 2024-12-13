@@ -162,7 +162,7 @@ img {
 }
 
 .nav__link{
-  position: fixed;
+  align-items: center;
   width: 2.5rem;
   height: 2.5rem;
   background-color: transparent;
