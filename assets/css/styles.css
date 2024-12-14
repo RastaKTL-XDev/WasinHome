@@ -209,8 +209,49 @@ img {
   margin-bottom: 1rem;
 }
 
-/*===== INFO =====*/
+.perfil__buttons{
+display: grid;
+column-gap: .5rem;
+grid-template-columns: repeat(2, 1fr);
+}
 
+.perfil__buttons .button{
+  padding: .75rem 0;
+}
+
+/*===== INFO =====*/
+.info{
+  background-color: var(--container-color);
+  padding: 2rem 1.5rem;
+  border-radius: 2rem;
+}
+
+.info__circle{
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--first-color);
+  border-radius: 50%;
+}
+
+.info__name{
+  font: var(--font-regular) var(--h1-font-size) var(--second-font)
+}
+
+.info__data{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: .5rem;
+}
+
+.info__image{
+  background: var(--conic-gradient;
+  height: 180px;
+  border-radius: 2rem;
+  display: grid;
+  margin-block: 1.5rem;
+  overflow: hidden;
+}
 
 /*===== ABOUT =====*/
 
